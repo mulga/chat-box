@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Bootstrap CSS -->
+
+    <!-- Fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/6b7d429c30.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>ChatBot</h1>
+      <p></p>
+    </div>
+
+    <div class="chat-bot-wrapper" id="chatBot">
+      <div class="chat-icon">
+        <img src="images/icons8-chat-48.png" />
+      </div>
+    </div>
+    <div class="chat" id="chatText">
+      <div class="chat-inside">
+        <div class="chat-header">
+          <div class="left">
+            <i class="fa-solid fa-chevron-left"></i>
+            <i class="fa-brands fa-reddit"></i>
+            <span>Help!</span>
+          </div>
+          <div class="right">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+        </div>
+        <div class="chat-text-area">
+          <div class="text-top"></div>
+          <!-- <div class="input-wrapper"> -->
+            <input type="text" id="userInput" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Js -->
+   
+    <script>
+      let chatBot = document.getElementById("chatBot");
+      let chatText = document.getElementById("chatText");
+
+      chatBot.addEventListener("click", function () {
+        chatText.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

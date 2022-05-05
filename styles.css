@@ -1,0 +1,199 @@
+/* Work Sans */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700&display=swap");
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  transition: all 400ms ease-in-out;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0%;
+}
+
+/* set up the body */
+body {
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: "Work Sans", sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+  line-height: 1.5;
+  min-height: 100vh;
+  background-color: #ecf0f1;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --------------------- */
+/* Utility classes                 */
+/* --------------------- */
+
+:root {
+  --color-primary: #007bff;
+  --color-secondary: #6c757d;
+  --color-success: #28a744;
+  --color-danger: #dc3644;
+  --color-warning: #ffc109;
+  --color-info: #18a2b8;
+  --color-light: #f8f9fa;
+  --color-dark: #343a40;
+  --color-white: #ffff;
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+/* --- Custom CSS --- */
+
+.chat-bot-wrapper {
+  /* width: 50px; */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.chat {
+  background-color: #0600ce;
+  width: 250px;
+
+  position: absolute;
+  right: 40px;
+  bottom: 100px;
+  /* top: 50px; */
+
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--color-white);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: none;
+}
+
+.chat.active {
+  display: block;
+}
+
+.chat-inside {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.chat-text-area {
+  background-color: #f5f9ff;
+
+  min-height: 350px;
+  border-radius: 3px;
+  margin: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.text-top {
+  background-color: var(--color-info);
+}
+
+#userInput {
+  width: 95%;
+  border: none;
+
+  border-radius: 50px;
+  padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+  color: #0600ce;
+  font-weight: 400;
+  margin-top: auto;
+  margin-bottom: 0.5rem;
+
+  background-color: #7eb2fc;
+}
