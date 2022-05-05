@@ -190,10 +190,9 @@ select {
 
   border-radius: 50px;
   padding: 0.3rem 0.5rem 0.3rem 0.5rem;
-  color: #0600ce;
+  /* color: #0600ce; */
   font-weight: 400;
   margin-top: auto;
   margin-bottom: 0.5rem;
-
-  background-color: #7eb2fc;
+  outline: none;
 }
